@@ -42,6 +42,32 @@
     display: block;
     margin-bottom: 10px;
   }
+
+  label[data-bearer], input#ech_pp_bearer_token {
+    position: relative;
+/*     display: block;
+    padding-right: 76px;
+    width: 180px;
+    box-sizing: border-box; */
+}
+input#ech_pp_bearer_token {
+  padding-left: 3em;
+}
+
+label[data-bearer]::before {
+    content: attr(data-bearer)" ";
+    position: absolute;
+    top:0px;
+    transform: translateY(45%);
+    left: 5px;
+    font-family: arial, helvetica, sans-serif;
+    font-size: 12px;
+    display: block;
+    color: rgba(0, 0, 0, 0.4);
+    font-weight: bold;
+    z-index: 1;
+}
+
   
   .form_container input[type="url"],
   .form_container input[type="text"],

@@ -61,20 +61,10 @@ class Ech_Privacy_Policy_Content_Crawler_Admin {
 	 */
 	public function enqueue_styles() {
 
-		/**
-		 * This function is provided for demonstration purposes only.
-		 *
-		 * An instance of this class should be passed to the run() function
-		 * defined in Ech_Privacy_Policy_Content_Crawler_Loader as all of the hooks are defined
-		 * in that particular class.
-		 *
-		 * The Ech_Privacy_Policy_Content_Crawler_Loader will then create the relationship
-		 * between the defined hooks and the functions defined in this
-		 * class.
-		 */
-
-		wp_enqueue_style( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'css/ech-privacy-policy-content-crawler-admin.css', array(), $this->version, 'all' );
-
+		// Apply below files only in this plugin admin page
+		if(isset($_GET['page']) && $_GET['page'] == 'reg_ech_privacy_policy_settings') {
+			wp_enqueue_style( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'css/	ech-privacy-policy-content-crawler-admin.css', array(), $this->version, 'all' );
+		}
 	}
 
 	/**
