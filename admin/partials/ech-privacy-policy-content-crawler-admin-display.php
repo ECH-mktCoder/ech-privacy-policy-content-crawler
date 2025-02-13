@@ -49,7 +49,9 @@ if(empty($api_link)) {
             <div class="form_row">
                 <?= !$check_Token ? '<h1 style="color:red;">請輸入Bearer Token或有誤</h1>' : '';?>
                 <label>API Bearer Token: </label>
+                <label data-bearer="Bearer ">
                 <input type="text" name="ech_pp_bearer_token" value="<?= htmlspecialchars(get_option('ech_pp_bearer_token'))?>" id="ech_pp_bearer_token" />
+                </label>
             </div>
 
             <div class="form_row">       
